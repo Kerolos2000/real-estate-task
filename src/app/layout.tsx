@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Real Estate Portal",
+  title: "Real Estate Task",
   description: "Browse and explore real estate properties",
 };
 
@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased`}>{children}</body>
+    <html lang="en">
+      <body className={`${inter.className}`}>{children}</body>
     </html>
   );
 }
