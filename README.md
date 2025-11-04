@@ -2,6 +2,17 @@
 
 A modern, frontend-only real estate web application built with Next.js, TypeScript, Tailwind CSS, Zustand, React Hook Form, Zod, and Leaflet maps.
 
+## Performance Scores
+
+### Google PageSpeed Insights Link
+https://pagespeed.web.dev/analysis/https-real-estate-task-omega-vercel-app/skio69sx0w?form_factor=desktop
+
+### Desktop Score
+![Desktop Score](public/pc-score.webp)
+
+### Mobile Score
+![Mobile Score](public/phone-score.webp)
+
 ## Overview
 
 The Real Estate Task is a responsive web application that allows users to browse real estate projects and their units with interactive map integration. All data is stored locally with no backend or external APIs required.
@@ -69,7 +80,7 @@ real-estate-task/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Kerolos2000/real-estate-task
    cd real-estate-task
    ```
 
@@ -94,7 +105,7 @@ real-estate-task/
 
 ## Mock Data
 
-Mock data is stored in JSON files:
+Mock data is stored in ts files:
 
 - **Projects:** `src/data/projects.ts` - Contains project information with names, descriptions, developers, and images
 - **Units:** `src/data/units.ts` - Contains property units with pricing, zones, and GPS coordinates
@@ -136,31 +147,13 @@ Protected routes automatically redirect unauthenticated users to the login page:
 
 ### Step-by-step Deployment
 
-1. **Push to GitHub**
+**Push to GitHub**
    ```bash
    git add .
    git commit -m "Initial commit: Real Estate Task"
    git push origin main
    ```
 
-2. **Connect to Vercel**
-   - Go to [vercel.com](https://vercel.com)
-   - Click "New Project"
-   - Import your GitHub repository
-   - Select the repository
-
-3. **Configure Project**
-   - Framework: Next.js (auto-detected)
-   - Root Directory: ./ (default)
-   - Build Command: `yarn build` (default)
-   - Output Directory: `.next` (default)
-
-4. **Deploy**
-   - Click "Deploy"
-   - Wait for the deployment to complete
-   - Your app will be live at `https://your-project-name.vercel.app`
-
-5. **Custom Domain (Optional)**
    - In Vercel dashboard, go to Settings > Domains
    - Add your custom domain
    - Update DNS records as instructed
@@ -186,19 +179,3 @@ Protected routes automatically redirect unauthenticated users to the login page:
 - Maps use OpenStreetMap; offline maps not available
 - Demo coordinates are sample data; not real GPS locations
 
-## Future Enhancements
-
-- Add unit photos gallery
-- Implement favorites/watchlist
-- Add comparison tool for multiple units
-- Email inquiry functionality
-- Virtual tour support
-- Advanced filtering (price range, size, etc.)
-
-## License
-
-MIT
-
-## Support
-
-For issues or questions, please create an issue in the repository.
