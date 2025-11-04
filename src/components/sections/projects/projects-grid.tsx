@@ -2,11 +2,11 @@
 
 import { useRouter } from "next/navigation";
 import { Button, ProjectCard } from "src/components";
+import { projects } from "src/data";
 import { useDataStore } from "src/hooks";
 
 export function ProjectsGrid() {
   const router = useRouter();
-  const projects = useDataStore((store) => store.projects);
   const selectedDeveloper = useDataStore((store) => store.selectedDeveloper);
   const selectedZone = useDataStore((store) => store.selectedZone);
   const searchQuery = useDataStore((store) => store.searchQuery);
@@ -20,7 +20,6 @@ export function ProjectsGrid() {
     });
   };
 
-  // حساب filteredProjects هنا داخل الكمبوننت
   const filteredProjects = projects.filter((p) => {
     const bySearch =
       !searchQuery || p.name.toLowerCase().includes(searchQuery.toLowerCase());

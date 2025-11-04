@@ -1,10 +1,10 @@
 "use client";
 
+import { projects } from "src/data";
 import { useDataStore } from "src/hooks";
 import { ProjectFilters } from "./project-filters";
 
 export function FiltersSection() {
-  const projects = useDataStore((store) => store.projects);
   const selectedDeveloper = useDataStore((store) => store.selectedDeveloper);
   const selectedZone = useDataStore((store) => store.selectedZone);
   const searchQuery = useDataStore((store) => store.searchQuery);
