@@ -7,7 +7,9 @@ export default function HomePage() {
   const router = useRouter();
 
   useEffect(() => {
-    router.push("/projects");
+    if (window.location.pathname === "/") {
+      router.push("/projects");
+    }
   }, [router]);
 
   return null;

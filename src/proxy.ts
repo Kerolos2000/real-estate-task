@@ -1,7 +1,7 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-const protectedRoutes = ["/", /^\/[^/]+\/units$/];
+const protectedRoutes = ["/", "/projects", /^\/projects\/[^/]+\/units$/];
 
 export default function middleware(req: NextRequest) {
   const token = req.cookies.get("token")?.value;
@@ -19,5 +19,5 @@ export default function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/", "/:path*/units"],
+  matcher: ["/", "/projects", "/projects/:path*/units"],
 };
