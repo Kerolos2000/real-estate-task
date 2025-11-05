@@ -1,12 +1,11 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { Button, ProjectCard } from "src/components";
 import { projects } from "src/data";
 import { useDataStore } from "src/hooks";
 
 export function ProjectsGrid() {
-  const router = useRouter();
   const selectedDeveloper = useDataStore((store) => store.selectedDeveloper);
   const selectedZone = useDataStore((store) => store.selectedZone);
   const searchQuery = useDataStore((store) => store.searchQuery);
@@ -57,10 +56,11 @@ export function ProjectsGrid() {
         {filteredProjects.map((project) => (
           <div
             key={project.id}
-            onClick={() => router.push(`/${project.id}/units`)}
             className="cursor-pointer transition-transform duration-500 hover:-translate-y-1 h-full"
           >
-            <ProjectCard project={project} />
+            <Link href={`/${project.id}/units`} passHref>
+              <ProjectCard project={project} />
+            </Link>
           </div>
         ))}
       </div>

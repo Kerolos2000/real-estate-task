@@ -1,12 +1,12 @@
 import Image from "next/image";
-import { Badge } from "src/components/ui/badge";
 import {
+  Badge,
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "src/components/ui/card";
+} from "src/components";
 import type { Project } from "src/types";
 
 interface ProjectCardProps {

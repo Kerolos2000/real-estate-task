@@ -11,6 +11,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Real Estate Task",
   description: "Browse and explore real estate properties",
+  icons: {
+    icon: "/hotel.svg",
+  },
 };
 
 export default function RootLayout({

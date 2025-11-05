@@ -1,7 +1,7 @@
 "use client";
 
 import { X } from "lucide-react";
-import { Button } from "src/components/ui/button";
+import { Button } from "src/components";
 
 interface ProjectFiltersProps {
   developers: string[];

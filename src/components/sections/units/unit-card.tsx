@@ -1,10 +1,10 @@
-import { Badge } from "src/components/ui/badge";
 import {
+  Badge,
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from "src/components/ui/card";
+} from "src/components";
 import type { Unit } from "src/types";
 
 interface UnitCardProps {
