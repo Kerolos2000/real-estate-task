@@ -58,7 +58,7 @@ export function ProjectsGrid() {
             key={project.id}
             className="cursor-pointer transition-transform duration-500 hover:-translate-y-1 h-full"
           >
-            <Link href={`/projects/${project.id}/units`} passHref>
+            <Link href={`/projects/${project.id}`} passHref>
               <ProjectCard project={project} />
             </Link>
           </div>

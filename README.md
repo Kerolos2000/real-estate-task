@@ -124,7 +124,7 @@ The app uses mock authentication with the following behavior:
 
 - **Login:** Any email and password (6+ chars) will authenticate successfully
 - **Token Storage:** A fake token is generated and stored in `Cookies` under the key `auth-token`
-- **Protected Routes:** `/` and `/projects/[projectId]/units` are protected and redirect to `/login` if not authenticated
+- **Protected Routes:** `/` and `/projects/[projectId]` are protected and redirect to `/login` if not authenticated
 - **Logout:** Clears the token from Cookies and redirects to login
 
 **Demo Credentials:**
@@ -137,7 +137,7 @@ Protected routes automatically redirect unauthenticated users to the login page:
 
 - `/login` - Public
 - `/` - Protected
-- `/projects/[projectId]/units` - Protected
+- `/projects/[projectId]` - Protected
 
 ## Deployment to Vercel
 
