@@ -54,14 +54,13 @@ export function ProjectsGrid() {
 
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {filteredProjects.map((project) => (
-          <div
+          <Link
             key={project.id}
             className="cursor-pointer transition-transform duration-500 hover:-translate-y-1 h-full"
+            href={`/projects/${project.id}`}
           >
-            <Link href={`/projects/${project.id}`}>
-              <ProjectCard project={project} />
-            </Link>
-          </div>
+            <ProjectCard project={project} />
+          </Link>
         ))}
       </div>
     </>

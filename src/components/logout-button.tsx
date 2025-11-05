@@ -13,8 +13,9 @@ export function LogoutButton() {
 
   return (
     <Button
+      variant="destructive"
       onClick={handleLogout}
-      className="cursor-pointer rounded-xl bg-linear-to-r from-red-500 to-red-600 text-white px-6 py-2 text-sm font-semibold shadow-md hover:from-red-600 hover:to-red-700 active:scale-95 transition-all duration-200"
+      className="cursor-pointer"
     >
       Logout
     </Button>

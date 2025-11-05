@@ -36,7 +36,7 @@ const DynamicLeafletMap = dynamic(
                 center={[unit.latitude, unit.longitude]}
                 zoom={13}
                 scrollWheelZoom={false}
-                style={{ height: 400, width: "100%" }}
+                style={{ height: 400, width: "100%", zIndex: 0 }}
               >
                 <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                 <Marker
