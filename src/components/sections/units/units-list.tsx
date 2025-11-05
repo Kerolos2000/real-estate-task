@@ -10,7 +10,8 @@ import type { Unit } from "src/types";
 const UnitMap = dynamic(() => import("./unit-map"), { ssr: false });
 
 export function UnitsList() {
-  const { projectId } = useParams();
+  const params = useParams();
+  const projectId = params?.projectId as string | undefined;
 
   const searchQuery = useDataStore((store) => store.searchQuery);
   const selectedZone = useDataStore((store) => store.selectedZone);
@@ -18,6 +19,7 @@ export function UnitsList() {
   const selectedUnit = useDataStore((store) => store.selectedUnit);
 
   const finalUnits = useMemo(() => {
+    if (!projectId) return [];
     return units.filter((unit) => {
       const matchesProject = unit.projectId === projectId;
       const matchesSearch =

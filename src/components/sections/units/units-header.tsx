@@ -5,8 +5,8 @@ import { projects } from "src/data";
 
 export function UnitsHeader() {
   const params = useParams();
-  const projectId = params.projectId;
-  const project = projects.find((p) => p.id === projectId);
+  const projectId = params?.projectId as string | undefined;
+  const project = projectId ? projects.find((p) => p.id === projectId) : null;
 
   if (!project) return null;
 

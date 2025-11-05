@@ -6,7 +6,8 @@ import { units } from "src/data";
 import { useDataStore } from "src/hooks";
 
 export function UnitsFilters() {
-  const { projectId } = useParams();
+  const params = useParams();
+  const projectId = params?.projectId as string | undefined;
 
   const searchQuery = useDataStore((store) => store.searchQuery);
   const selectedZone = useDataStore((store) => store.selectedZone);
@@ -14,6 +15,7 @@ export function UnitsFilters() {
   const clearFilters = useDataStore((store) => store.clearFilters);
 
   const finalUnits = useMemo(() => {
+    if (!projectId) return [];
     return units.filter((unit) => {
       const matchesProject = unit.projectId === projectId;
       const matchesSearch =
@@ -25,6 +27,7 @@ export function UnitsFilters() {
   }, [projectId, searchQuery, selectedZone]);
 
   const allZones = useMemo(() => {
+    if (!projectId) return [];
     return Array.from(
       new Set(units.filter((u) => u.projectId === projectId).map((u) => u.zone))
     );
